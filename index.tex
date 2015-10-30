@@ -1,0 +1,119 @@
+\documentclass[10pt,letterpaper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{chngcntr}
+\usepackage{titlesec}
+
+\title{A Course in Analysis}
+\author{Camille Jordan}
+
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,     
+    linkcolor=blue,
+}
+
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{10pt plus5pt minus5pt}
+
+\graphicspath{ {img/} }
+
+
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\pd}[2]{\partial_{#2}{#1}}
+\newcommand{\fpd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\Aut}{\mathrm{Aut\kern 2pt}}
+\newcommand{\End}{\mathrm{End\kern 2pt}}
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\centerimage}[2]{\begin{center}\includegraphics[#1]{#2}\end{center}}
+\newcommand{\norm}[1]{\left\|{#1}\right\|}
+\newcommand{\supnorm}[1]{\left\|{#1}\right\|_\infty}
+\newcommand{\seq}[2]{\left({#1}\right)_{#2}}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\Hol}[1]{\mathcal{H}(#1)}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\renewcommand\epsilon{\varepsilon}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+
+\counterwithout{paragraph}{subsubsection}
+\renewcommand{\theparagraph}{\arabic{paragraph}}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}[runin]{\normalfont\bfseries}{\theparagraph.}{\wordsep}{}
+\titlespacing{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{\wordsep}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+% [Original: Page 1]
+
+\part{Differential Calculus}
+
+\chapter{Real Variables}
+
+\section{Limits}
+
+\paragraph{} 
+The main objective of Arithmetic is the study of whole numbers.
+
+To solve, in every case, first order equations, we have to extend this primitive notion by introducing negative and rational numbers.
+
+The solution of equations of degree $> 1$ requires new generalizations. The principles on which these are based are closely related to those of infinitesimal calculus, so we briefly touch on them.
+
+% [Original: Page 2]
+
+\paragraph{Irrational numbers} Let $A$ and $B$ be two sets of rational numbers having the following properties
+\begin{enumerate}
+\item All numbers in $B$ are greater then all numbers in $A$
+\item For any given positive number $\epsilon$ there are $a$ in $A$ and $b$ in $B$ such that
+\[
+  b - a < \epsilon
+\]
+\end{enumerate}
+Given these hypostheses, the rational numbers can be partitioned into three classes: the first, $\mathcal{A}$, contains all numbers smaller then any number in $A$; the second, $\mathcal B$, all numbers greater then any number in $B$; the third, $\mathcal C$, those that are neither smaller then a number in $A$, nor greater then a number in $B$.
+
+It is impossible for this class $\mathcal C$ to contain two different numbers $c$ and $c' < c$. In fact for any choice of $a$ and $b$,
+\[
+  a\leq c', b\geq c\quad\mbox{we get}\quad b-a\geq c-c'
+\]
+contrary to out second hypotesis.
+
+It might contain a unique number $c$ (this is the case, for example, if we take for $A$ the set of numbers $< c$, and for $B$ the set of numbers $> c$).
+
+But it might also happen that it doesn't contain any (we know this to be the case if we take for $A$ all the even convergents, and for $B$ all the odd convergents of an infinite continued fraction).
+
+We will make this distinction disappear, and say that, in the second case, there still exists a number $c$ greater then all numbers in $\mathcal A$ and smaller then those in $\mathcal B$, but that such a number is \textit{irrational}.
+
+The set of numbers so obtained, both rational and irrational, constitutes the set of \textit{real} numbers.
+
+% [Original: Page 3]
+
+Each of these numbers is identified, as seen, by all rational numbers that are smaller and greater then it.
+
+\paragraph{}
+
+
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{thebibliography}
+
+\end{document}
