@@ -82,13 +82,13 @@ The solution of equations of degree $> 1$ requires new generalizations. The prin
 
 \paragraph{Irrational numbers} Let $A$ and $B$ be two sets of rational numbers having the following properties
 \begin{enumerate}
-\item All numbers in $B$ are greater then all numbers in $A$
+\item All numbers in $B$ are greater than all numbers in $A$
 \item For any given positive number $\epsilon$ there are $a$ in $A$ and $b$ in $B$ such that
 \[
   b - a < \epsilon
 \]
 \end{enumerate}
-Given these hypostheses, the rational numbers can be partitioned into three classes: the first, $\mathcal{A}$, contains all numbers smaller then any number in $A$; the second, $\mathcal B$, all numbers greater then any number in $B$; the third, $\mathcal C$, those that are neither smaller then a number in $A$, nor greater then a number in $B$.
+Given these hypostheses, the rational numbers can be partitioned into three classes: the first, $\mathcal{A}$, contains all numbers less than any number in $A$; the second, $\mathcal B$, all numbers greater than any number in $B$; the third, $\mathcal C$, those that are neither less than a number in $A$, nor greater than a number in $B$.
 
 It is impossible for this class $\mathcal C$ to contain two different numbers $c$ and $c' < c$. In fact for any choice of $a$ and $b$,
 \[
@@ -100,16 +100,50 @@ It might contain a unique number $c$ (this is the case, for example, if we take 
 
 But it might also happen that it doesn't contain any (we know this to be the case if we take for $A$ all the even convergents, and for $B$ all the odd convergents of an infinite continued fraction).
 
-We will make this distinction disappear, and say that, in the second case, there still exists a number $c$ greater then all numbers in $\mathcal A$ and smaller then those in $\mathcal B$, but that such a number is \textit{irrational}.
+We will make this distinction disappear, and say that, in the second case, there still exists a number $c$ greater than all numbers in $\mathcal A$ and less than those in $\mathcal B$, but that such a number is \textit{irrational}.
 
 The set of numbers so obtained, both rational and irrational, constitutes the set of \textit{real} numbers.
 
 % [Original: Page 3]
 
-Each of these numbers is identified, as seen, by all rational numbers that are smaller and greater then it.
+Each of these numbers is identified, as seen, by all rational numbers that are less and greater than it.
 
-\paragraph{}
+\paragraph{} If a rational number $r$ is less (resp. greater) than a real number $c$, then it is clear, after our definitions, that all rational numbers $r'$ less (resp. greater) than $r$ will also be less (resp. greater) than $c$.
 
+Moreover we can show that \textit{there is an infinity of rational numbers between $r$ and $c$}.
+
+In fact, if $c$ is rational, all numbers of the form $r+m(c-r)$ with $m$ any rational number between $0$ and $1$, will satify this condition.
+
+If $c$ is irrational, lets suppose, for example, $c > r$. Let $A, B$ be two sets of rational numbers that determine $c$. All rational numbers belong, by hypothesis, to one of the classes $\mathcal A, \mathcal B$ defined above.
+
+The number $r < c$ belongs to $\mathcal A$. It's therefore less than a number $a$ in $A$. This number $a$ being less than all those in $B$ cannot be in $\mathcal B$ and so it belongs to $\mathcal A$. It will therefore be less than another number $a_1$ in $A$. continuing like this, we obtain an infinite increasing sequence of rational numbers $r, a_1, \dots$, all less than $c$.
+
+We will say that a real number $c$ is greater than another real number $c'$ if there exists a rational number $r$ which is $<c$ and $> c'$. In this case, all rational numbers between $c$ and $r$ or between $r$ and $c'$, of which there is an infinity, enjoy the same property.
+
+It's clear that if $c> c'$ and $c' > c''$ then $c > c''$.
+
+To conclude, \textit{between any two rational number $r$ and $r+\epsilon$, there exists an irrational number} (and, therefore, an infinity of them).
+
+% [Original: Page 4]
+
+Let, in fact, $c$ be an irrational number defined by two sets of rational numbers $A$ and $B$. We can find in them two numbers $a$ and $b$ with a difference $<\epsilon$, and such that $c$ lays between $a$ and $b$.
+
+Let $A_1$,$B_1$ be the two sets obtained by adding $r-a$ to all the numbers in $A$ and in $B$. It's evident that these two new sets have the properties required to defined a new irrational number laying between $r$ and $r+\epsilon$.
+
+A real number $c$ will be called \textit{positive} if it's $> 0$ (in which case it will still be greater than an infinity of positive rational numbers), \textit{negative} it it's $< 0$.
+
+The inequalities
+\[
+  b-a > 0,\quad b-a < \epsilon
+\]
+can be written
+\[
+  (-a) - (-b) > 0,\quad (-a)-(-b) < \epsilon,
+\]
+and we see that to any real number $c$, defined by a set of numbers $a$ and one of numbers $b$, corresponds another number of opposite sign, defined by the set of numbers $-b$ and that of numbers $-a$. We will indicate such a number by $-c$. We have, after this definition,
+\[
+  -(-c) = c.
+\]
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
