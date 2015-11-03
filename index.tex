@@ -183,6 +183,59 @@ On the other hand, if $x > c$, we can find between $x$ and $c$  an infinity of r
 \]
 if we choose $a'$ and $b'$ so that $b'-a'< \epsilon$.
 
+\paragraph{} To define multiplication and division, we first assume $c$ and $c'$ to be positive.
+
+Let $\alpha, \alpha'$ be two abitrary fixed positive numbers contained in the sets $A, A'$; $\beta, \beta'$ two fixed numbers (necessarily positive) chosen from the sets $B, B'$; $a, b, a', b'$ positive numbers from these same sets; we will always have
+\[
+  bb' > aa',\quad \frac b {a'} > \frac a {b'}
+\]
+
+% [Original: Page 6]
+
+We can choose these numbers so that
+\[
+  b-a < \delta,\quad b'-a' < \delta
+\]
+where $\delta$ is a quantity to be determined later on.
+We can also suppose that $a$ and $b$ are contained in the interval from $\alpha$ to $\beta$, $a'$ and $b'$ in the interval from $\alpha'$ to $\beta'$. In fact, $a$, for example, is certainly $<\beta$. If it's $<\alpha$, then $b-\alpha < b-a < \delta$. We can then substitute $\alpha$ for $a$ and maintain all the required inequalities.
+
+Given this, we will have
+\begin{align*}
+  bb'-aa' &< (a+\delta)(a'+\delta) - aa'\\
+    &<(a+a')\delta + \delta^2 < (\beta+\beta')\delta + \delta^2;\\
+ \frac{b}{a'} - \frac{a}{b'} &= \frac{bb'-aa'}{a'b'} < 
+   \frac{(\beta + \beta')\delta + \delta^2}{\alpha'^2}    
+\end{align*}
+If we choose $\delta$ so that it satisfies the inequalities
+\[
+  \delta < 1,\quad 
+  \delta < \frac{\epsilon}{\beta+\beta'+1},\quad
+  \delta < \frac{\alpha'^2\epsilon}{\beta+\beta+1}
+\]
+we will have
+\begin{align*}
+  bb'-aa'&<(\beta + \beta' + 1)\delta < \epsilon\\
+  \frac{b}{a'}-\frac{a}{b'}&<
+  \frac{(\beta+\beta+1)\delta}{\alpha'^2} < \epsilon
+\end{align*}
+
+The set of number $aa'$, together with that of numbers $bb'$, and the set of numbers $\frac{a}{b'}$, together with that of numbers $\frac{b}{a'}$, define therefore two real numbers, to which we will refer as $cc'$ and $\frac{c}{c'}$.
+
+The division so defined is the inverse of the multiplication. To establish this, we must establish the equality of the numbers $\frac{c}{c'}c=c_1$ and $c$, by showing that the rational numbers greater than one of them are greater than the other, and vice-versa.
+
+Let $x$ be a number $>c_1$. It will be, by definition, greater than
+% [Original: Page 7]
+one of the numbers $\frac{b}{a'}b'$, and, a fortiori, greater than the number $b$; it will therefore be $> c$.
+
+Reciprocally, if $x > c$, there will exist another rational number $x-\epsilon$ still greater then $c$, which means greater then one of the numbers $b$. Now we can determine, for any $\delta, a'$ and $b'$ such that $b'<a'+\delta$, that
+\[
+  \frac{b}{a'}b'<b+\frac{b\delta}{a'}<b+\frac{\beta\delta}{\alpha'}.
+\]
+If we choose $\delta$ less than $\frac{\alpha'\epsilon}{\beta'}$, we will have $x>\frac{b}{a'}b'$. Therefore $x > c_1$.
+
+To extend the definition of the multiplication and the division to the case where one the factors, or both, are negative, we apply the rule of signs. To conclude we state without proof that a product is zero if one of the factors is.
+
+We see, without trouble, that the operations so generalized, applied to rational numbers, will lead to the same results of the normal operations, and that the algebraic rules of computation remain valid without any change.
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
 
