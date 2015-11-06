@@ -267,6 +267,31 @@ Likewise we can find in $B'$ a number $b'$ such that $b'-b$ is $<\frac\epsilon 3
 The sets $A',B'$, made of rational numbers, determine a real number $c$ greater than all the $a'$ and less than all the $b'$. This number satisfies the conditions required. In fact, if it's less than a number $a$ in $A$, then there would exist between $a$ and $c$ some rational number $a'$ greater than $c$, contrary to the definition of $c$. If it's greater than a number $b$ in $B$, we would arrive to an analogous contraddiction.
 
 We can see, like in paragraph \ref{par:irrational-numbers}, that such a number $c$ is unique.
+
+\paragraph{Limits} Let $x$ be a variable quantity, to which we give in succession an infinite sequence of values $x_1,\dots,x_n,\dots$. We say that the sequence $x_1,\dots,x_n,\dots$, or, in a more algebraic way, the variable $x$ \textit{tends} or \textit{converges} toward a \textit{limit} $c$ if, for all values of a positive quantity $\epsilon$, we can find an integer $\nu$ such that we have
+\[
+  |x_n-c| < \epsilon
+\]
+for all values of $n$ greater than $\nu$.
+
+% [Original: page 9]
+
+The variable $x$ cannot tend at the same time to two different limits $c$ and $c'$; because we would have
+\[
+  c'-c = (x_n-c)-(x_n-c'),
+\]
+from which
+\[
+  |c' - c| \leq |x_n-c| + |x_n-c'|.
+\]
+Therefore, regardless of $n$, at least one of the two modules
+\[
+  |x_n-c|,\quad|x_n-c'|
+\]
+would be at least equal to $\frac 1 2 |c'-c|$.
+
+It is important to transform the preceeding definition, of a way to prove the existence of a limit, even when we are unable to determine it.
+
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
 
