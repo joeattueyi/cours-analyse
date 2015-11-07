@@ -82,7 +82,7 @@ The solution of equations of degree $> 1$ requires new generalizations. The prin
 
 \paragraph{Irrational numbers}\label{par:irrational-numbers} Let $A$ and $B$ be two sets of rational numbers having the following properties
 \begin{enumerate}
-\item All numbers in $B$ are greater than all numbers in $A$
+\item Any number in $B$ is greater than any number in $A$
 \item For any given positive number $\epsilon$ there are $a$ in $A$ and $b$ in $B$ such that
 \[
   b - a < \epsilon
@@ -227,7 +227,7 @@ Let $x$ be a number $>c_1$. It will be, by definition, greater than
 % [Original: Page 7]
 one of the numbers $\frac{b}{a'}b'$, and, a fortiori, greater than the number $b$; it will therefore be $> c$.
 
-Reciprocally, if $x > c$, there will exist another rational number $x-\epsilon$ still greater then $c$, which means greater then one of the numbers $b$. Now we can determine, for any $\delta, a'$ and $b'$ such that $b'<a'+\delta$, that
+Reciprocally, if $x > c$, there will exist another rational number $x-\epsilon$ still greater than $c$, which means greater than one of the numbers $b$. Now we can determine, for any $\delta, a'$ and $b'$ such that $b'<a'+\delta$, that
 \[
   \frac{b}{a'}b'<b+\frac{b\delta}{a'}<b+\frac{\beta\delta}{\alpha'}.
 \]
@@ -245,7 +245,7 @@ We clearly have
   |a|-|b|-|c| &\leq a \pm b \pm c \leq |a|+|b|+|c|
 \end{align*}
 
-\paragraph{} Let $A,B$ be two sets of real numbers such that: first, all numbers in $B$ are greater then all numbers in $A$; second, we can find in $A$ and $B$ two numbers $a$ and $b$ such that $b-a<\epsilon$. Then there exists a unique real number $c$ such that we have
+\paragraph{} Let $A,B$ be two sets of real numbers such that: first, any number in $B$ is greater than any number in $A$; second, we can find in $A$ and $B$ two numbers $a$ and $b$ such that $b-a<\epsilon$. Then there exists a unique real number $c$ such that we have
 \[
   b\geq c \geq a
 \]
@@ -253,7 +253,7 @@ for all $a$ in $A$ and $b$ in $B$.
 
 In fact, let $A'$ be the set of rational numbers
 % [Original: page 8]
-less than at least one of the numbers in $A$; $B'$ the set of rational numbers greater than at least one of the numbers in $B$. The numbers in $B'$ will be greater then the ones in $A'$.
+less than at least one of the numbers in $A$; $B'$ the set of rational numbers greater than at least one of the numbers in $B$. The numbers in $B'$ will be greater than the ones in $A'$.
 
 Moreover, take from $A$ and $B$ two numbers $a$ and $b$ such that $b-a<\frac \epsilon 3$. We can find two rational numbers around $a$ with a difference $<\frac \epsilon 3$ of which the smaller $a'$ belongs to $A'$, so we have
 \[
@@ -291,6 +291,103 @@ Therefore, regardless of $n$, at least one of the two modules
 would be at least equal to $\frac 1 2 |c'-c|$.
 
 It is important to transform the preceeding definition, of a way to prove the existence of a limit, even when we are unable to determine it.
+
+\paragraph{Theorem} For a sequence $x_1,\dots,x_n,\dots$ to tend to a limit, it is necessary and sufficient that we can find a non-increasing sequence $\epsilon_1,\dots,\epsilon_n,\dots$ of positive numbers that has limit zero, and such that we have, for all values of the integers $n$ and $p$,
+\[
+  |x_n-x_{n+p}|<\epsilon_n
+\]
+
+\newcommand{\jseq}[2]{{#1}, \dots, {#2}, \dots}
+$1^{st}$ Suppose, in fact, that the sequence $\jseq{x_1}{x_n}$ tends to a limit $c$. Let $\jseq{\delta_1}{\delta_m}$ be decreasing sequence of positive numbers with limit zero. We can, by hypothesis, find for some value of $m$ a whole number $\nu_m$ such that, for $n>\nu_m$,
+\[
+  |x_n-c|<\frac 1 2 \delta_m
+\]
+and, as a result,
+\[
+  |x_n-x_{n+p}| \leq |x_n - c| + |x_{n+p}-c|\leq\delta_m.
+\]
+If $n\leq \nu_1$, but $n+p>\nu_1$, on the other hand
+\[
+  |x_n-x_{n+p}| \leq |x_n - c| + |x_{n+p}-c|\leq e+\delta_m.
+\]
+where $e$ is greater than the quantities $\jseq{|x_1-c|}{|x_{\nu_1}-c|}$.
+
+% [Original: page 10]
+
+Finally, if both $n$ and $n+p$ are not $>\nu_1$, we will have
+\[
+  |x_n-x_{n+p}| \leq |x_n - c| + |x_{n+p}-c|\leq 2e.
+\]
+
+Define now a sequence of positive quantities $\jseq{\epsilon_1}{\epsilon_n}$ by the relations
+\begin{align*}
+  \epsilon_n &= 2e+\delta_1,\quad&\mbox{ if }n\leq \nu_1\\
+  \epsilon_n &= \delta_m,\quad&\mbox{ if }\nu_m<n\leq<\nu_{m+1}\\
+\end{align*}
+
+We will have
+\[
+  |x_n-x_n+p|\leq \epsilon_n
+\]
+Moreover the quantities $\epsilon_n$ form a non-increasing sequence, and $\epsilon_n$ tends to zero when $n$ tends to $\infty$. Because we can find $m$ such that $\delta_m$ is less than a arbitrary quantity $\epsilon$, and it then suffices to take $n>\nu_m$ to be sure that
+\[
+  \epsilon_n\leq \delta_m<\epsilon.
+\]
+
+$2^nd$ Reciprocally, suppose that we could determine a sequence  $\jseq{\epsilon_1}{\epsilon_n}$ of positive numbers that tend to zero, and such that we have, at least for the values of $n$ that are greater than a fixed number $m$,
+\begin{equation}\label{eqn:1}
+  |x_n-x_m|<\epsilon_n
+\end{equation}
+and we want to show that the sequence $\jseq{x_1}{x_n}$ tends to a limit.
+
+Denote with $a_\nu$ the greatest of the quantities
+\[
+  x_{m+1}-\epsilon_{m+1},\dots,x_\nu-\epsilon_\nu
+\]
+and with $b_\nu$ the smallest of the quantities
+\[
+  x_{m+1}+\epsilon_{m+1},\dots,x_\nu+\epsilon_\nu
+\]
+we clearly have
+\[
+  a_\nu\geq a_\mu\quad b_\nu\leq b_\mu\quad\mbox{if }\nu>\mu
+\]
+
+On the other hand, the inequality \ref{eqn:1} can be written as
+\[
+  -\epsilon_n<x_n-x_{n+p}<\epsilon_n
+\]
+from which
+\[
+  x_n-\epsilon_n<x_{n+p}<x_n+\epsilon_n
+\]
+
+Suppose $n\leq\nu$ and substitute in this equation $p$ with $p+\nu-n$; it becomes
+\[
+  x_n-\epsilon_n<x_{\nu+p}<x_n+\epsilon_n
+\]
+and as it occurs for the values $n=m_1,\dots\nu$, we deduce that
+\[
+  a_\nu<x_{\nu+p}<x_n+\epsilon_n.
+\]
+
+More generally for $\mu$ and $\nu$ any two positive integers $>m$, and $\lambda$ greater than them, we have, by a combination of the above inequalities
+\[
+  a_\nu\leq a_\lambda < b_\lambda < b_\nu
+\]
+So, any number $b$ is greater than any number $a$.
+
+Moreover
+\[
+  b_\nu-a_\nu\leq(x_\nu+\epsilon_\nu) - (x_\nu-\epsilon_\nu)\leq 2\epsilon_\nu
+\]
+a quantity that can be made $<\epsilon$ by taking $\nu$ big enough.
+
+Therefore the two sets of numbers $a$ and $b$ determine a number $c$. This number and the number $x_{\nu+p}$ being both comprised between $a_\nu$ and $b_\nu$, we have
+\[
+  |x_{\nu+p}-c|<\epsilon
+\]
+which is precisely the condition for the quantities $x$ to converge to $c$.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
