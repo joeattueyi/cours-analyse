@@ -4,7 +4,7 @@ This is an English translation of Camille Jordan's *Cours d'Analyse*, 2nd editio
 
 Jordan's *Cours d'Analyse* is the work from which most mathematicians from the end of the 19th to the beginning of the 20th century learned analysis. 
 
-I always wanted to read it but there is no English or Italian translations available. Since I didn't know French I decided to kill two birds with one stone and learn the language while doing something interesting.
+I always wanted to read it but there is no English or Italian translations available. Since I didn't know French I decided to learn the language while doing something interesting.
 
 ## Originals
 
@@ -22,4 +22,4 @@ There are reprints available but some, like the one from the Cambridge Library C
 
 * 1, Natural numbers and the need for extensions
 * 2 - 7, Real numbers via Dedekind cuts
-* 8-9, Limits
+* 8 - 10, Limits

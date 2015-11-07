@@ -292,10 +292,12 @@ would be at least equal to $\frac 1 2 |c'-c|$.
 
 It is important to transform the preceeding definition, of a way to prove the existence of a limit, even when we are unable to determine it.
 
-\paragraph{Theorem} For a sequence $x_1,\dots,x_n,\dots$ to tend to a limit, it is necessary and sufficient that we can find a non-increasing sequence $\epsilon_1,\dots,\epsilon_n,\dots$ of positive numbers that has limit zero, and such that we have, for all values of the integers $n$ and $p$,
+\paragraph{Theorem} \textit{
+For a sequence $x_1,\dots,x_n,\dots$ to tend to a limit, it is necessary and sufficient that we can find a non-increasing sequence $\epsilon_1,\dots,\epsilon_n,\dots$ of positive numbers that has limit zero, and such that we have, for all values of the integers $n$ and $p$,
 \[
   |x_n-x_{n+p}|<\epsilon_n
 \]
+}
 
 \newcommand{\jseq}[2]{{#1}, \dots, {#2}, \dots}
 $1^{st}$ Suppose, in fact, that the sequence $\jseq{x_1}{x_n}$ tends to a limit $c$. Let $\jseq{\delta_1}{\delta_m}$ be decreasing sequence of positive numbers with limit zero. We can, by hypothesis, find for some value of $m$ a whole number $\nu_m$ such that, for $n>\nu_m$,
@@ -334,7 +336,7 @@ Moreover the quantities $\epsilon_n$ form a non-increasing sequence, and $\epsil
   \epsilon_n\leq \delta_m<\epsilon.
 \]
 
-$2^nd$ Reciprocally, suppose that we could determine a sequence  $\jseq{\epsilon_1}{\epsilon_n}$ of positive numbers that tend to zero, and such that we have, at least for the values of $n$ that are greater than a fixed number $m$,
+$2^{nd}$ Reciprocally, suppose that we could determine a sequence  $\jseq{\epsilon_1}{\epsilon_n}$ of positive numbers that tend to zero, and such that we have, at least for the values of $n$ that are greater than a fixed number $m$,
 \begin{equation}\label{eqn:1}
   |x_n-x_m|<\epsilon_n
 \end{equation}
@@ -353,7 +355,7 @@ we clearly have
   a_\nu\geq a_\mu\quad b_\nu\leq b_\mu\quad\mbox{if }\nu>\mu
 \]
 
-On the other hand, the inequality \ref{eqn:1} can be written as
+On the other hand, the inequality (\ref{eqn:1}) can be written as
 \[
   -\epsilon_n<x_n-x_{n+p}<\epsilon_n
 \]
@@ -388,6 +390,56 @@ Therefore the two sets of numbers $a$ and $b$ determine a number $c$. This numbe
   |x_{\nu+p}-c|<\epsilon
 \]
 which is precisely the condition for the quantities $x$ to converge to $c$.
+
+\paragraph{Corollary} \textit{
+If the quantities $x_n$ are such that we always have
+\[
+  x_{n+1}\geq x_n
+\]
+they will converge to a limit $c$ or grow to eventually surpass any given quantity $E$.
+}
+
+Indeed, suppose first that, for any value
+% [Original: page 12]
+of the positive quantity $\delta$, we can find an integer $\nu$ such that we always have
+\[
+  x_{\nu+p}-x_\nu < \delta
+\]
+whatever is $p$.
+
+Giving to $\delta$ a sequence of values $\delta_1,\delta_2\dots$ converging to zero; let $\nu_1,\nu_2,\dots$ be the corresponding values of $\nu$.
+
+Moreover, let $n$ be a number $\geq\nu_k$ and $<\nu_{k+1}$. We have
+\[
+  |x_{n}-x_{n+p}|=x_{n+p} - x_n \leq x_{n+p} - x_{\nu_k}
+\]
+and if we set $n+p=\nu_k + q$,
+\[
+  |x_{n}-x_{n+p}|<x_{\nu_k + q} - x_n < \delta_k
+\]
+
+If we define the quantities $\jseq{\epsilon_{\nu_k}}{\epsilon_n}$ by the contition
+\[
+  \epsilon_n = \delta_k\quad\mbox{when }n\geq\nu_k<\nu_{k+1}
+\]
+we have
+\[
+  |x_{n}-x_{n+p}| < \epsilon_n.
+\]
+
+The quantities $\epsilon_n$ so defined, converge to zero, the quantities $x_n$ will tend to a limit.
+
+Suppose, on the contrary, that there exists a quantity $\delta$ for which it's impossible to find a corresponding quantity $\nu$. We can, whatever is $n$, determine a number $n+p=n_1$ such that $x_{n_1}-x_n$ are all greater than $\delta$.
+Therefore we can find a sequence of numbers $1, n_1, n_2,\dots,n_k,\dots$ such that we have
+\[
+  x_{n_1}-x_1\geq \delta,\quad x_{n_2}-x_{n_1}>\delta,\quad\dots
+\]
+from which
+\[
+  x_{n_k}>x_1+k\delta
+\]
+
+This number will become greater than any given number $E$ as soon as $k$ will be greater than $\frac{E-x_1}{\delta}$.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
