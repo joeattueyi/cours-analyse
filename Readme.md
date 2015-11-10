@@ -22,4 +22,4 @@ There are reprints available but some, like the one from the Cambridge Library C
 
 * 1, Natural numbers and the need for extensions
 * 2 - 7, Real numbers via Dedekind cuts
-* 8 - 11, Limits
+* 8 - 12, Limits

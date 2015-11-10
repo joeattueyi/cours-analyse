@@ -456,6 +456,31 @@ then at the same time
   |-x_n+c|<\epsilon.
 \]
 
+\paragraph{} \textit{If the variable $x$ tends to a limit $c$ different from zero, $\frac 1 x$ will tend to the limit $\frac 1 c$.}
+
+Let, in fact, $x_n-x=\xi_n$; we will have
+\[
+  \left|\frac{1}{x_n} - \frac 1 c\right| = 
+    \left|-\frac{\xi_n}{c(c+\xi_n)}\right| =
+    \frac{|\xi_n|}{|c||c+\xi_n|} \leq
+    \frac{|\xi_n|}{|c|(|c|-|\xi_n|)}
+\]
+a quantity that will become $<\epsilon$ as soon as $n$ will be big enough to have
+\[
+  |\xi_n|\leq\frac{|c|^2\epsilon}{1+|c|\epsilon}.
+\]
+
+If $x$ tends to zero, we can, for any positive quantity $E$, find a number $\nu$ such that, for all values of $n$ greater than $\nu$,
+\[
+  |x_n|<\frac 1 E,
+    \quad\mbox{from which}\quad
+    \left|\frac 1 {x_n}\right|> E.
+\]
+
+Therefore $\frac 1 x$ doesn't tend to a any limit. We will agree, however, to say that it tends to $\infty$.
+
+If, while tending to $\infty$, $x$ stays from a certain moment afterward constantly positive, we will say that it tends to $+\infty$. If it stays constantly negative, it will tend to $-\infty$.
+
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
 
