@@ -443,6 +443,8 @@ This number will become greater than any given number $E$ as soon as $k$ will be
 
 \paragraph{} \textit{If the variable $x$ tends to a limit $c$, $-x$ tends to the limit $-c$.}
 
+% [Original: page 13]
+
 This proposition is evident; because we have
 \[
   |x-c|=|-x+c|.
@@ -480,6 +482,79 @@ If $x$ tends to zero, we can, for any positive quantity $E$, find a number $\nu$
 Therefore $\frac 1 x$ doesn't tend to a any limit. We will agree, however, to say that it tends to $\infty$.
 
 If, while tending to $\infty$, $x$ stays from a certain moment afterward constantly positive, we will say that it tends to $+\infty$. If it stays constantly negative, it will tend to $-\infty$.
+
+\paragraph{} \textit{Let $x, y$ be two variable quantities that change simultaneously, and take respectively the sequences of values $x_1, y_1;\dots;x_n,y_n;\dots$. If $x, y$ tend respectively to 
+% [Original: page 14]
+the finite limits $c, d$, $x+y$ and $xy$ will tend to the limits $c+d$, $cd$.}
+
+Let, in fact,
+\[
+  x_n-x=\xi_n,\quad y_n-d=\eta_n.
+\]
+
+We can, by definition, for any positive quantity $\delta$, find two quantities $\nu_1$ and $\nu_2$, such that
+\begin{align*}
+  |\xi_n|<\delta &\mbox{, if } n>\nu_1\\
+  |\eta_n|<\delta &\mbox{, if } n>\nu_2
+\end{align*}
+and, consequently,
+\[
+  |\xi_n|<\delta,\quad|\eta_n|<\delta,\quad\mbox{if }n>\nu
+\]
+where $\nu$ is the maximum of $\nu_1$ and $\nu_2$.
+
+Given this, we have
+\begin{align*}
+  |x_n+y_n-(x+d))| 
+    &= |\xi_n+\eta_n\leq |\xi_n|+|\eta_n| < 2\delta,\\
+  |x_ny_n-cd| &= |c\eta_n+d\xi_n+\xi_n\eta_n|\\
+    &\leq |c||\eta_n|+|d||\xi_n| + |\xi_n||\eta_n|\\
+    &<|c|\delta + |d|\delta + \delta^2
+\end{align*}
+
+The second memebers of these inequalities will be $<\epsilon$ if we take a $\delta$ such that at the same time
+\[
+  \delta <\frac\epsilon 2,\quad
+    \delta < 1,\quad
+    \delta < \frac{\epsilon}{|c|+|d|+1}.
+\]
+
+Our proposition has then been proved.
+
+If $x$ tends to $\infty$ and $y$ continues to tend to finite limit $d$, we can, likewise, for arbitrary $E'$ and $\delta$, find a number $\nu$ such that
+\[
+  |x_n|>E',\quad
+    |y_n-d|<\delta,\quad
+    \mbox{if }n>\nu,
+\]
+from which
+\begin{align*}
+  |x_n-y_n| &= 
+    |x_n+y_n-d+d|\geq
+    |x_n| - |y_n-d| - |d|\\
+    &> E'-\delta-|d| > E,
+\end{align*}
+if we choose $E'$ greater than $E+\delta+|d|$. Therefore, in this case, $x+y$ will tend to $\infty$.
+
+% [Original: page 15]
+
+The product $xy$ will tend to $\infty$ if $d$ is not zero. In fact, by choosing $\delta < |d|$ we will have
+\[
+  y_n = d + (y_n - d),
+\]
+from which
+\[
+  |y_n|\geq |d| - \delta,
+\]
+and finally
+\[
+  |x_ny_n| > E'(|d|-\delta) > E,
+\]
+if we choose $E'$ greater than $\frac{E}{|d|-\delta}$.
+
+If $y$ tends to zero, and at the same time $x$ tends to $\infty$, we can't say anything \textit{a priori}.
+
+Suppose finally that $x$ and $y$ both tend to $\infty$. We can't say say anything \textit{a priori} on the sum $x+y$. But the product will clearly tend to $\infty$.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
