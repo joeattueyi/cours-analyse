@@ -74,7 +74,7 @@
 \paragraph{} 
 The main objective of Arithmetic is the study of whole numbers.
 
-To solve, in every case, first order equations, we have to extend this primitive notion by introducing negative and rational numbers.
+To solve all possible first order equations we have to extend this primitive notion by introducing negative and rational numbers.
 
 The solution of equations of degree $> 1$ requires new generalizations. The principles on which these are based are closely related to those of infinitesimal calculus, so we briefly touch on them.
 
@@ -94,7 +94,7 @@ It is impossible for this class $\mathcal C$ to contain two different numbers $c
 \[
   a\leq c', b\geq c\quad\mbox{we get}\quad b-a\geq c-c'
 \]
-contrary to out second hypotesis.
+contrary to our second hypotesis.
 
 It might contain a unique number $c$ (this is the case, for example, if we take for $A$ the set of numbers $< c$, and for $B$ the set of numbers $> c$).
 
@@ -114,7 +114,7 @@ Moreover we can show that \textit{there is an infinity of rational numbers betwe
 
 In fact, if $c$ is rational, all numbers of the form $r+m(c-r)$ with $m$ any rational number between $0$ and $1$, will satify this condition.
 
-If $c$ is irrational, lets suppose, for example, $c > r$. Let $A, B$ be two sets of rational numbers that determine $c$. All rational numbers belong, by hypothesis, to one of the classes $\mathcal A, \mathcal B$ defined above.
+If $c$ is irrational, lets suppose, for example, that $c > r$. Let $A, B$ be two sets of rational numbers that determine $c$. All rational numbers belong, by hypothesis, to one of the classes $\mathcal A, \mathcal B$ defined above.
 
 The number $r < c$ belongs to $\mathcal A$. It's therefore less than a number $a$ in $A$. This number $a$ being less than all those in $B$ cannot be in $\mathcal B$ and so it belongs to $\mathcal A$. It will therefore be less than another number $a_1$ in $A$. continuing like this, we obtain an infinite increasing sequence of rational numbers $r, a_1, \dots$, all less than $c$.
 
@@ -122,11 +122,11 @@ We will say that a real number $c$ is greater than another real number $c'$ if t
 
 It's clear that if $c> c'$ and $c' > c''$ then $c > c''$.
 
-To conclude, \textit{between any two rational number $r$ and $r+\epsilon$, there exists an irrational number} (and, therefore, an infinity of them).
+Finally, \textit{between any two rational number $r$ and $r+\epsilon$, there exists an irrational number} (and, therefore, an infinity of them).
 
 % [Original: Page 4]
 
-Let, in fact, $c$ be an irrational number defined by two sets of rational numbers $A$ and $B$. We can find in them two numbers $a$ and $b$ with a difference $<\epsilon$, and such that $c$ lays between $a$ and $b$.
+In fact, let $c$ be an irrational number defined by two sets of rational numbers $A$ and $B$. We can find in them two numbers $a$ and $b$ with a difference $<\epsilon$, and such that $c$ lays between $a$ and $b$.
 
 Let $A_1$,$B_1$ be the two sets obtained by adding $r-a$ to all the numbers in $A$ and in $B$. It's evident that these two new sets have the properties required to defined a new irrational number laying between $r$ and $r+\epsilon$.
 
@@ -586,9 +586,31 @@ We can, in the majority of cases, make this notion precise, and measure with a n
 
 According to this definition, a quantity $y$ that tends to a finite limit will be an infinitesimal of order zero; an infinitely large $y$ such that $yx^\alpha$ tends to a finite limit different from zero will be an infinitesimal of order $-\alpha$.
 
-In all questions involving a number of infinitesimals $x,y,z,\dots$ dependent on each other, we can arbitrarily choose one of them as a unit of measure. This \textit{primary infinitesimal}, $x$, for example, being considered as having the unity as order of magnitude, $y, z, \dots$ will have orders of magnitude represented respectively by the numbers $\alpha, \beta, \dots$
+In all questions involving a number of infinitesimals $x,y,z,\dots$ dependent on each other, we can arbitrarily choose one of them as a unit of measure. This \textit{principal infinitesimal}, $x$, for example, being considered as having the unity as order of magnitude, $y, z, \dots$ will have orders of magnitude represented respectively by the numbers $\alpha, \beta, \dots$
 
 The same comparison procedure is applicable to the infinitely large.
+
+\paragraph{} Let $y$ be an infinitesimal of order $\alpha$; $A$ the limit to which $\frac{y}{x^\alpha}$ tends when $x$ tends to zero. We will have
+\[
+  \frac{y}{x^\alpha} = A + h,
+  \quad\mbox{from which}\quad
+  y = Ax^\alpha + hx^\alpha
+\]
+$h$ tending to zero with $x$.
+
+The first term $Ax^\alpha$ is called the \textit{principal value} of $y$. It represents that infinitesimal having a relative error that decreases indefinitely with $x$.
+
+If we are not satisfied with this first approximation, then we will have to determine the principal value of the remaining part. Let $Bx^\alpha$ be this principal value, we get a second value
+\[
+  y = Ax^\alpha + B x^\beta
+\]
+approaching at order $\beta$. In the same way we will find, if it's helpful, the principal value of the rest, and so on.
+
+The determination of the principal values on an infinitesimal and the development in power series of the principal infinitesimal, which follows, is the main object of the First part of this Course.
+
+% [Original: page 18]
+
+The solution of this fundamental problem furnishes a precise method of approximation in all the applications of Mathematics; but that is not its only use: it allows to obtain entirely rigorous results, based on the following proposition.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
