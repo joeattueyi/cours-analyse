@@ -612,6 +612,50 @@ The determination of the principal values on an infinitesimal and the developmen
 
 The solution of this fundamental problem furnishes a precise method of approximation in all the applications of Mathematics; but that is not its only use: it allows to obtain entirely rigorous results, based on the following proposition.
 
+\paragraph{} \textit{The ratio of two infinitesimals of the same order, $y$ and $z$, having principal values $Ax^\alpha$ and $Bx^\alpha$ respectively, has limit $\frac A B$.}
+
+We have, in fact,
+\[
+  y=x^\alpha(A+h),\quad z = x^\alpha(B + k)
+\]
+$h$ and $k$ tending to zero with $x$. Therefore
+\[
+  \lim \frac x y = \lim\frac{A+h}{B+k} = \frac A B.
+\]
+
+\section{Topology}
+
+\paragraph{} Let $x,y,\dots$ be variable quantities; we will call \textit{point} a set of simultaneous values $a, b,\dots$ given to these variables; the \textit{distance} of two points $p=(a,b,\dots)$ and $p' = (a',b',\dots)$ will be the expression
+\[
+  pp' = |a'-a| + |b'-b| + \dots
+\]
+
+We will say that the point $p=(a,b,\dots)$ is the \textit{limit} of a sequence of points
+\[
+  p_1=(x_1,y_1,\dots),
+  \quad\dots,\quad
+  p_n=(x_n,y_n,\dots),
+\]
+if the distance $pp_n$ has limit zero for $n$ that increases indefinitely, which amounts to say that $x_n,y_n,\dots$ have limits $a,b,\dots$ respectively.
+
+% [Original: page 19]
+
+By \textit{set} in this section we will mean a set of points, either finite or infinite. The \textit{dimension} of a set is the number of variables $x, y, \dots$ that define its points.
+
+We call \textit{limit point} of a set $E$ any point that is the limit of a sequence of points in $E$ different from itself. The set of limit points is indicated by $E'$ and is called the \textit{derived set} of $E$.
+
+Lets consider, for example, the case of a single dimension. From the preceding definitions, the set of integers has no limit point.
+
+That of fractions $\frac 1 4,\frac 1 4, \frac 1 8,\dots$ has only the limit point $x=0$.
+
+That of rational numbers $>a$ and $<b$ has for derived set the set of real numbers $\geq a$ and $\leq b$.
+
+This last one is equal to its derived set.
+
+We see from these examples that a set $E$ might contain points that are not in its derived $E'$, and vice versa.
+
+If a point $p=(a,b,\dots)$ belongs to $E$ without being in $E'$, we can, by definition, find a quantity $\epsilon$ such that all other points of $E$ have a distance greater than $\epsilon$ from $p$. In this case we say that $p$ is an \textit{isolated point} of $E$.
+
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
 

@@ -23,4 +23,5 @@ There are reprints available but some, like the one from the Cambridge Library C
 * 1, Natural numbers and the need for extensions
 * 2 - 7, Real numbers via Dedekind cuts
 * 8 - 15, Limits
-* 16 - 18, Infinitesimals
+* 16 - 19, Infinitesimals
+* 20, Topology in R^n
