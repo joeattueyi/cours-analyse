@@ -24,4 +24,4 @@ There are reprints available but some, like the one from the Cambridge Library C
 * 2 - 7, Real numbers via Dedekind cuts
 * 8 - 15, Limits
 * 16 - 19, Infinitesimals
-* 20, Topology in R^n
+* 20 - 21, Topology in R^n

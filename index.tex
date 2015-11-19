@@ -656,6 +656,23 @@ We see from these examples that a set $E$ might contain points that are not in i
 
 If a point $p=(a,b,\dots)$ belongs to $E$ without being in $E'$, we can, by definition, find a quantity $\epsilon$ such that all other points of $E$ have a distance greater than $\epsilon$ from $p$. In this case we say that $p$ is an \textit{isolated point} of $E$.
 
+\paragraph{} We will say that a set is \textit{perfect} if it contains its derived set.\footnote{[In modern terminology a set $E$ is said to be perfect if $E'=E$. Instead, a set $E$ such that $E'\subseteq E$ is called \textit{closed}.]}
+
+\textit{A set $E'$, derived of another set $E$, is necessarily perfect.}
+
+In fact let $\pi$ be a limit point of $E'$. We can, by hypothesis, find in $E'$ a point $p'$ such that the distance $p'\pi$ is $<\frac\epsilon 2$. On the other hand, $p'$ being a limit point of $E$, we can find in $E$ a point $p$ such that the distance $pp'$ is $<\frac\epsilon 2$. Granted this, let
+\[
+  p=(a,b,\dots),\quad p'=(a',b',\dots),\quad \pi=(\alpha,\beta,\dots);
+\]
+% [Original: page 20]
+we have
+\begin{align*}
+  p\pi &=    |a-\alpha| + |b-\beta| + \cdots \\
+       &\geq |a-b'| + |a-\alpha| + |b-b'| + |b-\beta| + \cdots \\
+       &\geq pp' + p'\pi < \epsilon
+\end{align*}
+Therefore $\pi$ is a limit point of $E$ and belongs to $E'$.
+
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
 
