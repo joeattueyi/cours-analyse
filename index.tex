@@ -625,7 +625,7 @@ $h$ and $k$ tending to zero with $x$. Therefore
 
 \section{Topology}
 
-\paragraph{} Let $x,y,\dots$ be variable quantities; we will call \textit{point} a set of simultaneous values $a, b,\dots$ given to these variables; the \textit{distance} of two points $p=(a,b,\dots)$ and $p' = (a',b',\dots)$ will be the expression
+\paragraph{} Let $x,y,\dots$ be variable quantities; we will call \textit{point} a set of simultaneous values $a, b,\dots$ given to these variables; the \textit{gap} of two points $p=(a,b,\dots)$ and $p' = (a',b',\dots)$ will be the expression
 \[
   pp' = |a'-a| + |b'-b| + \dots
 \]
@@ -636,7 +636,7 @@ We will say that the point $p=(a,b,\dots)$ is the \textit{limit} of a sequence o
   \quad\dots,\quad
   p_n=(x_n,y_n,\dots),
 \]
-if the distance $pp_n$ has limit zero for $n$ that increases indefinitely, which amounts to say that $x_n,y_n,\dots$ have limits $a,b,\dots$ respectively.
+if the gap $pp_n$ has limit zero for $n$ that increases indefinitely, which amounts to say that $x_n,y_n,\dots$ have limits $a,b,\dots$ respectively.
 
 % [Original: page 19]
 
@@ -654,13 +654,13 @@ This last one is equal to its derived set.
 
 We see from these examples that a set $E$ might contain points that are not in its derived $E'$, and vice versa.
 
-If a point $p=(a,b,\dots)$ belongs to $E$ without being in $E'$, we can, by definition, find a quantity $\epsilon$ such that all other points of $E$ have a distance greater than $\epsilon$ from $p$. In this case we say that $p$ is an \textit{isolated point} of $E$.
+If a point $p=(a,b,\dots)$ belongs to $E$ without being in $E'$, we can, by definition, find a quantity $\epsilon$ such that all other points of $E$ have a gap greater than $\epsilon$ from $p$. In this case we say that $p$ is an \textit{isolated point} of $E$.
 
 \paragraph{} We will say that a set is \textit{perfect} if it contains its derived set.\footnote{[In modern terminology a set $E$ is said to be perfect if $E'=E$. Instead, a set $E$ such that $E'\subseteq E$ is called \textit{closed}.]}
 
 \textit{A set $E'$, derived of another set $E$, is necessarily perfect.}
 
-In fact let $\pi$ be a limit point of $E'$. We can, by hypothesis, find in $E'$ a point $p'$ such that the distance $p'\pi$ is $<\frac\epsilon 2$. On the other hand, $p'$ being a limit point of $E$, we can find in $E$ a point $p$ such that the distance $pp'$ is $<\frac\epsilon 2$. Granted this, let
+In fact let $\pi$ be a limit point of $E'$. We can, by hypothesis, find in $E'$ a point $p'$ such that the gap $p'\pi$ is $<\frac\epsilon 2$. On the other hand, $p'$ being a limit point of $E$, we can find in $E$ a point $p$ such that the gap $pp'$ is $<\frac\epsilon 2$. Granted this, let
 \[
   p=(a,b,\dots),\quad p'=(a',b',\dots),\quad \pi=(\alpha,\beta,\dots);
 \]
@@ -672,6 +672,34 @@ we have
        &\geq pp' + p'\pi < \epsilon
 \end{align*}
 Therefore $\pi$ is a limit point of $E$ and belongs to $E'$.
+
+\paragraph{} If the set $E$ doesn't contain all possible points, the points that don't belong to it form the \textit{complement} $E_1$.
+
+Let $E',E_1'$ be the derived set of $E$ and $E_1$ respectively. The points of space can be partitioned into three classes:
+\begin{enumerate}[$1^o$]
+\item Those that are in $E$, but not in $E_1'$. For each such $p$ we can find a quantity $\epsilon$ such that all points with a gap to $p$ which is $<\epsilon$ don't belong to $E_1$, and so belong to $E$. We will say that the points of this class are in the \textit{interior} of $E$ (and in the \textit{exterior} of $E_1$)
+\item Those that are in $E_1$, but not in $E'$. These are the points that are in the exterior of $E$ and in the interior of $E_1$.
+\item Finally those that are in $E$ or $E_1$ and in the derived set of the other. These points constitute the \textit{boundary} common to the two sets $E, E_1$.
+\end{enumerate}
+\textit{Boundary points always exist}. In fact let $p=(a,b,\dots)$ and $\pi=(\alpha,\beta,\dots)$ be any two points chosen from $E$ and $E_1$ respectively, and let $n$ be an arbitrary integer. Consider the sequence of points of the form
+\[
+  \left(a+\frac{m}{2^n}(\alpha-a), b+\frac{m}{2^n}(\beta-b)\right)
+\]
+where $m$ takes the values $0, 1,\dots,2^n$. The first of point in this sequence is $p$ and belongs to $E$; the last is $\pi$ and belongs to $E_1$. Let $p_n$ be the last point in the sequence that belongs to $E$, $\pi_n$ the point after that. We will have
+\begin{align*}
+  p_n   &= (a+t_n(\alpha-a), b+t_n(\beta-b),\dots) \\
+  \pi_n &= (a+u_n(\alpha-a), b+u_n(\beta-b),\dots)
+\end{align*}
+% [Original: page 21]
+$t_n$ and $u_n$ being rationals between $0$ and $1$, having difference $\frac 1 {2^n}$, and of which the first never decreases, while the second never increases with $n$.
+
+Suppose first that there is no value of $n$ after which $t_n$ stops increasing or $u_n$ stops decreasing. The quantities $t_n$ and $u_n$ will tend to a common limit $\theta$, and the points $\jseq{p_1}{p_n}$ on one side and $\jseq{\pi_1}{\pi_n}$ on the other, will have as limit the point
+\[
+  P = (a+\theta(\alpha-a), b+\theta(\beta-b),\dots).
+\]
+Therefore this point will belong at the same time to $E'$ and to $E_1'$, and, since it necessarily belongs to either $E$ or $E_1$, it will be a boundary point.
+
+Suppose, on the contrary, that after a certain value $\nu$ of $n$, $t_n$, for example, stops increasing and remains equal to $t_\nu$; $u_n$ will decrease and tend to $t_\nu$ and the points $\pi_\nu,\pi_{\nu+1},\dots$ will tend to $p_\nu$. Therefore this point will belong to $E_1'$ and, since it belongs to $E$, it would still be a boundary point.
 
 \begin{thebibliography}{9}
 \addcontentsline{toc}{chapter}{Bibliography}
